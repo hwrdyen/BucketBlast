@@ -2,3 +2,53 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/typography" as *;
 @use "../../styles/variable" as *;
+
+.Footer {
+  &__Container {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__Info {
+    &--container {
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include tablet {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__Legal {
+    &--container {
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include tablet {
+        flex-direction: row;
+      }
+
+      @include desktop {
+      }
+    }
+  }
+}
