@@ -1,0 +1,59 @@
+@use "../../styles/global" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variable" as *;
+
+.Header {
+  &__Container {
+    @include mobile {
+      padding: $mobile-side-margin $mobile-side-margin;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    @include tablet {
+      padding: $mobile-side-margin $tablet-side-margin;
+      flex-direction: row;
+    }
+    @include desktop {
+      padding: $tablet-side-margin $desktop-side-margin;
+      flex-direction: row;
+    }
+  }
+
+  &__Icon {
+    color: $bucketblast-black;
+  }
+
+  &__NavBar {
+    &--container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @include mobile {
+        justify-content: space-evenly;
+      }
+    }
+
+    &--title {
+      color: $bucketblast-black;
+    }
+
+    &--title:visited {
+      color: $bucketblast-black;
+    }
+  }
+
+  &__Auth {
+    &--container {
+      white-space: nowrap;
+    }
+    &--title {
+      color: $bucketblast-black;
+    }
+  }
+}
